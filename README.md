@@ -1,3 +1,7 @@
+#### Fork
+Adapted the Payload class so that it works with Electron (see `Payload.js`).
+
+---
 
 ![splash](docs/assets/img/readme/splash-github.png)
 
