@@ -40,7 +40,7 @@ export function makeMutations (state) {
     .reduce(function (obj, key) {
       const mutation = resolveName('mutations', key)
       obj[mutation] = function (state, value) {
-        state[key] = value instanceof Payload || value.isPayloadInstance
+        state[key] = value instanceof Payload || (value && value.isPayloadInstance)
           ? Payload.update(value, state[key])
           : value
       }

@@ -1,6 +1,6 @@
 /**
  * Bundle of: vuex-pathify
- * Generated: 2020-02-13
+ * Generated: 2020-02-15
  * Version: 1.4.2
  */
 
@@ -685,7 +685,7 @@
       .reduce(function (obj, key) {
         var mutation = resolveName('mutations', key);
         obj[mutation] = function (state, value) {
-          state[key] = value instanceof Payload || value.isPayloadInstance
+          state[key] = value instanceof Payload || (value && value.isPayloadInstance)
             ? Payload.update(value, state[key])
             : value;
         };
